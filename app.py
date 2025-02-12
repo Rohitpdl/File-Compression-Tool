@@ -101,9 +101,7 @@ def compress_file():
             as_attachment=True,
             download_name=compressed_filename,
             mimetype='application/octet-stream'
-        ),redirect(url_for('index'))
-        
-    
+        )
         
     except Exception as e:
         flash(f'Error during compression: {str(e)}')
