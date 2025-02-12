@@ -124,7 +124,8 @@ def decompress_file():
     
     try:
         filename = secure_filename(file.filename)
-        decompressed_filename = filename.rsplit('.huf', 1)[0]
+        decompressed_filename =f"de{filename.rsplit('.huf', 1)[0]}"
+       
         
         # Process the file
         decompressed_data, processing_time, _ = process_file(file.stream, 'decompress')
